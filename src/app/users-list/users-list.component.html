@@ -1,6 +1,6 @@
 <input type="text" placeholder="Search users..." (input)="onSearch($event)">
 <ul>
-  <li *ngFor="let user of filteredUsers">
+  <li *ngFor="let user of filteredUsers$ | async">
     <strong>{{ user.name }}</strong> ({{ user.username }}) - {{ user.email }}
   </li>
 </ul>
