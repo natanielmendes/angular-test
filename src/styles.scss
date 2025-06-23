@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  background-color: #181a1b;
+  color: #f8f9fa;
+}
+
+.card, .list-group-item {
+  background-color: #23272b;
+  color: #f8f9fa;
+}
+
+input.form-control, input[type="text"] {
+  background-color: #23272b;
+  color: #f8f9fa;
+  border: 1px solid #495057;
+}

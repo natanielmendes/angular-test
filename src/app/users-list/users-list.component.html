@@ -1,6 +1,18 @@
-<input type="text" placeholder="Search users..." (input)="onSearch($event)">
-<ul>
-  <li *ngFor="let user of filteredUsers$ | async">
-    <strong>{{ user.name }}</strong> ({{ user.username }}) - {{ user.email }}
-  </li>
-</ul>
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-lg border-0">
+        <div class="card-body bg-dark text-light">
+          <h2 class="card-title mb-4">Users List</h2>
+          <input type="text" class="form-control mb-3" placeholder="Search users..." (input)="onSearch($event)">
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let user of filteredUsers$ | async" class="list-group-item bg-dark text-light">
+              <strong>{{ user.name }}</strong> <span class="text-secondary">({{ user.username }})</span><br>
+              <small class="text-info">{{ user.email }}</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
