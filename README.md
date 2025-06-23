@@ -1,27 +1,49 @@
-# AngularApp
+# Angular Users List App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+This project is an Angular application that lists users fetched from [jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users). It features a debounced search, Bootstrap styling, and a dark mode theme.
 
-## Development server
+## Features
+- Fetches users from a public API using RxJS and HttpClient
+- Debounced search input (2 seconds, minimum 2 characters)
+- Responsive, modern UI with Bootstrap 5
+- Dark mode enabled by default
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisites
+- [Node.js](https://nodejs.org/) (v16 or later recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-## Code scaffolding
+## Setup Instructions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the repository:**
+   ```bash
+   git clone <your-repo-url>
+   cd angular-app
+   ```
 
-## Build
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Run the development server:**
+   ```bash
+   npm start
+   # or
+   ng serve
+   ```
+   The app will be available at [http://localhost:4200](http://localhost:4200).
 
-## Running unit tests
+## Usage
+- Navigate to `/users` to see the users list.
+- Use the search box to filter users by name, username, or email. The search triggers after 2 seconds and at least 2 characters.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Customization
+- UI is styled with Bootstrap 5 and custom dark mode styles in `src/styles.scss`.
+- You can further customize the look by editing `src/styles.scss` or using more Bootstrap components.
 
-## Running end-to-end tests
+## Troubleshooting
+- If you encounter dependency issues, ensure your Node.js and npm versions are up to date.
+- For Bootstrap or Angular errors, try deleting `node_modules` and running `npm install` again.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+This project is for educational/demo purposes.
